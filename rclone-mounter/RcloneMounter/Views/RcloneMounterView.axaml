@@ -1,0 +1,31 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="RcloneMounter.Views.RcloneMounterView">
+    
+    <DockPanel Background="#99111110">
+        <StackPanel Background="White"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+      <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+         <StackPanel Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center">
+        <TextBox Name="AccessKeyTextBox" Grid.Row="0" Watermark="Enter Access Key"/>
+        <TextBox Name="SecretKeyTextBox" Grid.Row="1" Watermark="Enter Secret Key"/>
+        </StackPanel>
+        <TextBox Name="SourceName" Grid.Row="1" HorizontalContentAlignment="Center" Watermark="Enter Source Name"/>
+        <Button Name="SubmitButton" Grid.Row="2" Content="Save Source"  HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Click="SubmitButton_Click"/>
+    </Grid>
+    </StackPanel>
+    </DockPanel>
+
+</UserControl>
